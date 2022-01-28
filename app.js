@@ -45,7 +45,7 @@ mongoose.connect(MONGODB_URL)
       if (!user) {
         const user = new User({
           name: 'jill',
-          email: 'jill@test.com',
+          email: 'willfrog1224@byui.edu',
           cart: {
             items: []
           }
