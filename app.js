@@ -38,9 +38,11 @@ app.use(shopRoutes);
 
 app.use(errorController.get404);
 
+console.log("connecting to mongodb", MONGODB_URL)
 mongoose.connect(MONGODB_URL)
 
   .then(result => {
+    console.log("connected to mongo searching for user")
     User.findOne().then(user => {
       if (!user) {
         const user = new User({
@@ -53,10 +55,11 @@ mongoose.connect(MONGODB_URL)
         user.save();
       }
     });
+    console.log("starting up application on PORT", PORT)
     app.listen(PORT);
   })
   .catch(err => {
-    console.log(err);
+    console.log("error starting up application", err);
   });
 
 
