@@ -53,7 +53,7 @@ mongoose.connect(MONGODB_URL)
         user.save();
       }
     });
-    app.listen(3000);
+    app.listen(PORT);
   })
   .catch(err => {
     console.log(err);
