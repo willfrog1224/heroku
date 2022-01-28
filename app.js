@@ -9,7 +9,7 @@ const errorController = require('./controllers/error');
 const User = require('./models/user');
 const MONGODB_URL = process.env.MONGODB_URL || "mongodb+srv://jill:mongoUser1@cluster0.ouhbd.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 const corsOptions = {
-  origin: "https://<your_app_name>.herokuapp.com/",
+  origin: "https://jacse341-main.herokuapp.com/",
   optionsSuccessStatus: 200
 };
 const app = express();
